@@ -4,7 +4,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - Entry point
- *
+ * return: always 0
  */
 int main(void)
 {
