@@ -8,6 +8,7 @@
 int main(void)
 {
 	int lc, uc;
+
 	for (lc = 'a'; lc <= 'z'; lc++)
 		putchar(lc);
 	for (uc = 'A'; uc <= 'Z'; uc++)
