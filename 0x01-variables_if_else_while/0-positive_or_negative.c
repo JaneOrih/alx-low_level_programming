@@ -4,7 +4,10 @@
 /* betty style doc for function main goes there */
 /**
  * main - main function
- * return: always 0
+ *
+ * this program tells if a number n,is positive or negative
+ *
+ * return: always 0 success
  */
 int main(void)
 {
