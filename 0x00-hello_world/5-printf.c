@@ -1,9 +1,8 @@
 #include <stdio.h>
-/*
- * include is for introducing the library
- * main - entry or opening to the program
- * printf for printing
- * return (0) success
+
+/**
+ * main - Entry point
+ * Return: always 0
  */
 int main(void)
 {
