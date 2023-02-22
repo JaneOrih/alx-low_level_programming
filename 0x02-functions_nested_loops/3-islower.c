@@ -4,7 +4,7 @@
 
 /**
  * _islower - This is used for changing all arg to lower case
- * c : arg passed
+ * @c: arg passed
  * Return: always 0
  */
 
