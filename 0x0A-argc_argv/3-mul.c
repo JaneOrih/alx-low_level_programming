@@ -9,11 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int mul;
 
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	(void) argc;
+	printf("%d\n", mul);
 	return (0);
 }
