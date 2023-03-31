@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <string.h>
 
 /**
  * add_node - adds a new node at the beginning of a linked list
@@ -9,14 +10,22 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *temp;
+	unsigned int len = 0;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
-	return (NULL);
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
+	{
+		return (NULL);
+	}
+	while (str[len])
+	{
+		len++;
+	}
 
-	new->str = str;
-	new->next = *head;
-	*head = new;
-	return (new);
+	temp->str = strdup(str);
+	temp->len = len;
+	temp->next = *head;
+	(*head) = temp;
+	return (temp);
 }
