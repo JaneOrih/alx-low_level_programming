@@ -29,6 +29,7 @@ int check(char *s)
  * main - maun function
  * @argc: argument count
  * @argv: argument vector
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
