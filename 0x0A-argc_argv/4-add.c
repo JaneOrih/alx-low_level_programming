@@ -1,20 +1,29 @@
 #include "main.h"
-#include <ctype.h> 
-
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
- * is_digit - function to chek if input is a digit
- * @x: input value/ string
- * Return: integer
+ * check - function to check
+ * @s: array
+ * Return: int
  */
-int is_digit(int argc, char *x)
+int check(char *s)
 {
-	int j;
+	unsigned int c = 0;
 
-	for (j = 0; j < argc; j++)
+	while (c < strlen(s))
 	{
-		if (isdigit(arg[v]))
+		if (!isdigit(s[c]))
+		{
+			return (0);
+		}
+		c++;
 	}
+	return (1);
+
 }
+
 
 /**
  * main - maun function
@@ -23,17 +32,29 @@ int is_digit(int argc, char *x)
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, sum, n;
 
+	sum = 0;
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
 	}
 	else
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (argv[i] != 
+			if (!check(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else
+			{
+				n = atoi(argv[i]);
+				sum += n;
+			}
 		}
+		printf("%d\n", sum);
 	}
+	return (0);
 }
